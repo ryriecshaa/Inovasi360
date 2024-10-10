@@ -1,0 +1,256 @@
+@import "styles/custom.scss";
+
+%sideMenu {
+  :global(.ant-menu-horizontal) {
+    border-bottom: none;
+  }
+  :global(.ant-menu-title-content) {
+    font-weight: 400 !important;
+    font-size: 16px !important;
+  }
+}
+
+.menu {
+  // @media (max-width: 320px) {
+  //   width: 320px;
+  // }
+
+  &__dark {
+    background-color: #17254e;
+    :global(.ant-typography) {
+      color: #ffffff !important;
+    }
+
+    :global(.ant-menu) {
+      background-color: #17254e;
+    }
+
+    :global(.ant-menu-item) {
+      :global(.ant-menu-title-content a) {
+        color: #ffffff !important;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    transition: transform 0.5s; //will be inherited
+    width: 110%;
+    //transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+    display: block;
+
+    &::after {
+      content: attr(data-after);
+      display: inline-block;
+      transform: translateY(-100%);
+      position: absolute;
+      left: 0;
+      transition: inherit;
+      color: #dc143c;
+      font-weight: bold;
+    }
+
+    > span {
+      display: inline-block;
+      transform: translateY(0%);
+      transition: inherit;
+    }
+
+    &:hover {
+      > span {
+        transform: translateY(100%);
+      }
+      &::after {
+        transform: translateY(0%);
+      }
+    }
+  }
+
+  &__light {
+    background-color: #ffffff;
+    border-radius: 20px;
+    :global(.ant-typography) {
+      color: #17254e !important;
+    }
+
+    :global(.ant-menu) {
+      background-color: #ffffff;
+    }
+
+    :global(.ant-menu-item) {
+      :global(.ant-menu-title-content a) {
+        color: #17254e !important;
+      }
+    }
+  }
+}
+
+.menuBar {
+  @extend %sidePadding;
+  overflow: hidden;
+}
+
+.logo {
+  width: 150px;
+  float: left;
+}
+
+.logo a {
+  display: inline-block;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.menuCon {
+  width: 100%;
+  float: left;
+  @media (min-width: 992px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (max-width: 991.5px) {
+    :global(.ant-image-img) {
+      margin-top: 10px;
+    }
+  }
+}
+
+.menuCon .ant-menu-item {
+  padding: 0px 5px;
+}
+
+.menuCon .ant-menu-submenu-title {
+  padding: 10px 20px;
+}
+
+.menuCon .ant-menu-item a,
+.menuCon .ant-menu-submenu-title a {
+  padding: 10px 15px;
+}
+
+.menuCon .ant-menu-horizontal {
+  border-bottom: none;
+}
+
+.menuCon .leftMenu {
+  float: left;
+  @extend %sideMenu;
+}
+
+.menuCon .rightMenu {
+  float: right;
+  @extend %sideMenu;
+}
+
+.barsMenu {
+  float: right;
+  height: 32px;
+  padding: 6px;
+  margin-top: 8px;
+  display: none;
+  background: none;
+}
+
+.barsBtn {
+  display: block;
+  width: 20px;
+  height: 2px;
+  position: relative;
+}
+
+.darkBtn {
+  background: white;
+}
+
+.lightBtn {
+  background: black;
+}
+
+.darkBtn:after,
+.darkBtn:before {
+  content: attr(x);
+  width: 20px;
+  background: white;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  height: 2px;
+}
+
+.lightBtn:after,
+.lightBtn:before {
+  content: attr(x);
+  background: black;
+  width: 20px;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  height: 2px;
+}
+
+.barsBtn:after {
+  top: auto;
+  bottom: -6px;
+}
+
+.ant-drawer-body {
+  padding: 0;
+}
+
+.barsMenu > span {
+  display: block;
+}
+
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item,
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-submenu {
+  display: inline-block;
+  width: 100%;
+}
+
+.ant-drawer-body .ant-menu-horizontal {
+  border-bottom: none;
+}
+
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item:hover {
+  border-bottom-color: transparent;
+}
+
+@media (max-width: 991.5px) {
+  .barsMenu {
+    display: inline-block;
+    border-radius: 36px;
+  }
+
+  .lightMenu {
+    color: black;
+    border-color: black;
+  }
+
+  .darkMenu {
+    color: white;
+    border-color: white;
+  }
+
+  .leftMenu,
+  .rightMenu {
+    display: none;
+  }
+
+  .logo a {
+    margin-left: -20px;
+  }
+
+  .menuCon .ant-menu-item,
+  .menuCon .ant-menu-submenu-title {
+    padding: 1px 20px;
+  }
+
+  .logo a {
+    padding: 10px 20px;
+  }
+}

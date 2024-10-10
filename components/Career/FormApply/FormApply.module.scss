@@ -1,0 +1,94 @@
+.form {
+    display: grid;
+  
+    :global(.ant-input) {
+      border: none;
+      border-bottom: 1px solid #d9d9d9 !important;
+  
+      &:hover {
+        border-bottom: 1px solid black !important;
+      }
+    }
+  
+    :global(.ant-input:placeholder-shown) {
+      font-size: 20px !important;
+    }
+
+    &__selectSection{
+        border:none;
+        border-bottom: 1px solid #d9d9d9 !important;
+        gap: 48px;
+        font-size: 20px;
+        margin-top: 5px;
+    }
+  
+    &__titleSection {
+      display: grid;
+      gap: 24px;
+    }
+  
+    &__buttonSection {
+      padding-bottom: 20px;
+      padding-left: 10px;
+      border-bottom: 1px solid #ada9a9 !important;
+  
+      &:hover {
+        border-bottom: 1px solid black !important;
+      }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+        float: right;
+      @media (max-width: 767.5px) {
+        margin: auto;
+        justify-content: flex;
+        display: flex;
+        margin-top: 20px;
+      }
+    }
+
+    &__upload{
+      float:right;
+    }
+
+    &__buttonApply {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        padding-right: 25px;
+        float: right;
+      @media (max-width: 767.5px) {
+        margin: auto;
+        justify-content: flex;
+        display: flex;
+        margin-top: 20px;
+        float: right;
+      }
+    }
+
+    &__kategori{
+        display: flex;
+        justify-content: flex-end;
+        pointer-events: none;
+        margin-bottom:30px;
+        margin-right: 20px;
+      @media (max-width: 767.5px) {
+        justify-content: center;
+        display: flex;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__CVTitle{
+      color: #ada9a9 !important;
+      font-size: 20px;
+      padding-top:10px;
+      @media (max-width: 767.5px){
+        font-size: 15px !important;
+      }
+    }
+  }
+  

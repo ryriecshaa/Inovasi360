@@ -1,0 +1,52 @@
+@import "styles/custom.scss";
+
+.product {
+  @extend %padding;
+  padding: 150px 100px;
+  display: flex;
+  overflow: hidden;
+
+  @media (max-width: 393px) {
+    //mobile
+    &__card {
+      margin-left: -1rem;
+    }
+
+    &__info {
+      z-index: -1 !important;
+    }
+  }
+
+  @media (max-width: 767.5px) {
+    display: block;
+
+    &__content {
+      margin-bottom: 50px;
+      min-width: 100% !important;
+    }
+  }
+
+  :global(.react-draggable) {
+    display: flex;
+    background-color: #ffffff;
+    z-index: 1;
+  }
+
+  &__title {
+    @extend %titleFont;
+    line-height: 50px !important;
+    margin: 0 !important;
+  }
+
+  &__description {
+    @extend %subtitleFont;
+    line-height: 40px !important;
+    margin: 0 !important;
+  }
+
+  &__content {
+    min-width: 700px;
+    display: grid;
+  }
+}
+

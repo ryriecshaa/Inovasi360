@@ -1,0 +1,31 @@
+@import "styles/custom.scss";
+
+.header {
+  @extend %padding;
+  display: grid;
+  gap: 130px;
+
+  @media (max-width: 991.5px) {
+    gap: 36px;
+  }
+
+  &__content {
+    text-align: center;
+    margin: auto;
+    max-width: 900px;
+    display: grid;
+    gap: 60px;
+
+    @media (max-width: 767.5px) {
+      gap: 24px;
+    }
+  }
+
+  &__title {
+    @extend %titleFont;
+  }
+
+  &__subtitle {
+    @extend %subtitleFont;
+  }
+}

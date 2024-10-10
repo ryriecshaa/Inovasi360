@@ -1,0 +1,10 @@
+@import "styles/custom.scss";
+
+.listCareer {
+  display: grid;
+  gap: 130px;
+
+  @media (max-width: 991.5px) {
+    gap: 36px;
+  }
+}

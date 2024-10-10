@@ -1,0 +1,18 @@
+.label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 12px 32px;
+
+    position: absolute;
+    min-width: 200px;
+    width: auto;
+    height: auto;
+    bottom: 40px;
+    margin-left: 40px;
+
+    background: #17254E;
+    border-radius: 28px;
+    color: #FFFFFF;
+    font-size: 16px;
+}

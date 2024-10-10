@@ -1,0 +1,136 @@
+@import "styles/custom.scss";
+
+.footer {
+  background-color: #17254e;
+
+  &__container {
+    text-align: center;
+    color: #ffffff;
+    display: grid;
+    gap: 150px;
+    padding-top: 0 !important;
+    @extend %padding;
+
+    @media (max-width: 767.5px) {
+      padding-bottom: 84px;
+    }
+  }
+
+  &__content {
+    margin-top: 230px;
+    display: grid;
+    gap: 36px;
+
+    @media (max-width: 575.5px) {
+      margin-top: 80px;
+    }
+  }
+
+  &__contactUs {
+    display: grid;
+    gap: 16px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (max-width: 991.5px) {
+      background-size: 200%;
+      background-position: top;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    @extend %titleContentFont;
+  }
+
+  &__subtitle {
+    @extend %subtitleContentFont;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin: auto;
+  }
+
+  &__footer {
+    :global(.ant-typography) {
+      text-align: left !important;
+
+      @media (max-width: 991.5px) {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  &__footerText {
+    display: grid;
+    gap: 16px;
+
+    &__email {
+      color: #ffffff !important;
+      margin: 0 !important;
+      @media (max-width: 991.5px) {
+        font-size: 28px !important;
+      }
+    }
+
+    &__address {
+      margin: 0 !important;
+      color: #babeca !important;
+    }
+  }
+
+  &__menu {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+
+    @media (max-width: 991.5px) {
+      font-size: 16px !important;
+    }
+  }
+
+  &__subMenu {
+    font-weight: 400;
+    font-size: 16px;
+    color: #babeca !important;
+    text-align: left;
+
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    transition: transform 0.5s; //will be inherited
+    //transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+    display: block;
+
+    &::after {
+      content: attr(data-after);
+      display: inline-block;
+      color: #babeca !important;
+      transform: translateY(-100%);
+      position: absolute;
+      left: 0;
+      transition: inherit;
+    }
+
+    > span {
+      display: inline-block;
+      color: #babeca !important;
+      transform: translateY(0%);
+      transition: inherit;
+    }
+
+    &:hover {
+      > span {
+        transform: translateY(100%);
+        color: #babeca !important;
+      }
+      &::after {
+        transform: translateY(0%);
+        color: #dc143c !important;
+      }
+    }
+  }
+}

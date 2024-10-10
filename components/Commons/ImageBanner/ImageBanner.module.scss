@@ -1,0 +1,27 @@
+.imageBanner {
+  :global(.ant-image) {
+    width: 100%;
+    :global(.ant-image-img) {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+
+      @media (max-width: 767.5px) {
+        //mobile
+        height: 200px;
+      }
+      @media (min-width: 768px) and (max-width: 991.5px) {
+        //tablet
+        height: 300px;
+      }
+      @media (min-width: 992px) and (max-width: 1199.5px) {
+        //desktop
+        height: 400px;
+      }
+      @media (min-width: 1200px) {
+        //large desktop
+        height: 500px;
+      }
+    }
+  }
+}

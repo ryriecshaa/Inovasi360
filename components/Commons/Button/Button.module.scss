@@ -1,0 +1,176 @@
+$speed: 0.5s;
+
+%buttonStyle {
+  border-radius: 28px !important;
+  opacity: 1 !important;
+  outline: 0 !important;
+  position: relative !important;
+  text-align: center !important;
+  letter-spacing: 1px !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+  background: none !important;
+  border: none !important;
+  font-size: 16px;
+  min-width: 200px;
+  font-family: inherit;
+  font-weight: 600;
+  width: fit-content;
+  height: fit-content;
+
+  @media (max-width: 575.5px) {
+    width: auto;
+    min-width: unset;
+  }
+}
+
+%buttonStyleKategori {
+  @extend %buttonStyle;
+  min-width: 120px;
+  letter-spacing: 0 !important;
+  font-size: 14px;
+  padding: 10px;
+}
+
+%hoverStyle {
+  &:after {
+    opacity: 1 !important;
+    transform: translateY(0) rotateX(0) !important;
+  }
+
+  &:before {
+    opacity: 0 !important;
+    transform: translateY(20%) rotateX(90deg) !important;
+  }
+}
+
+%buttonContentStyle {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  display: block !important;
+  transition: $speed !important;
+  position: absolute !important;
+  border-radius: 28px !important;
+  height: fit-content;
+  padding: 10px;
+  font-family: "Plus Jakarta Sans" !important;
+  color: #0A0A0A !important;
+}
+
+.Button {
+  @extend %buttonStyle;
+  color: #fff !important;
+
+  &:hover {
+    @extend %hoverStyle;
+  }
+
+  &:after {
+    @extend %buttonContentStyle;
+    opacity: 0 !important;
+    color: #ffffff !important;
+    background: #f37f65 !important;
+    content: attr(data-back) !important;
+    transform: translateY(-30%) rotateX(90deg) !important;
+  }
+
+  &:before {
+    @extend %buttonContentStyle;
+    opacity: 1 !important;
+    color: #ffffff !important;
+    background: #f04923 !important;
+    content: attr(data-front) !important;
+    transform: translateY(0) rotateX(0) !important;
+  }
+}
+
+.buttonOutline {
+  color: transparent !important;
+  @extend %buttonStyle;
+
+  &:hover {
+    @extend %hoverStyle;
+  }
+
+  &:after {
+    @extend %buttonContentStyle;
+    opacity: 0 !important;
+    color: #ffffff !important;
+    background: #f04923 !important;
+    content: attr(data-back) !important;
+    transform: translateY(-30%) rotateX(90deg) !important;
+  }
+
+  &:before {
+    @extend %buttonContentStyle;
+    opacity: 1 !important;
+    color: #17254e !important;
+    background: transparent !important;
+    content: attr(data-front) !important;
+    transform: translateY(0) rotateX(0) !important;
+    border: 1px solid #17254e;
+  }
+}
+
+.buttonOutlineLight {
+  color: transparent !important;
+  @extend %buttonStyle;
+
+  &:hover {
+    @extend %hoverStyle;
+  }
+
+  &:after {
+    @extend %buttonContentStyle;
+    opacity: 0 !important;
+    color: #ffffff !important;
+    background: #f04923 !important;
+    content: attr(data-back) !important;
+    transform: translateY(-30%) rotateX(90deg) !important;
+  }
+
+  &:before {
+    @extend %buttonContentStyle;
+    opacity: 1 !important;
+    color: #ffffff !important;
+    background: transparent !important;
+    content: attr(data-front) !important;
+    transform: translateY(0) rotateX(0) !important;
+    border: 1px solid #ffffff;
+  }
+}
+
+.buttonOutlineKategori {
+  color: transparent !important;
+  margin-left: 0.5rem;
+  @extend %buttonStyleKategori;
+
+  &:hover {
+    @extend %hoverStyle;
+  }
+
+  &:after {
+    @extend %buttonContentStyle;
+    opacity: 0 !important;
+    color: black !important;
+    content: attr(data-back) !important;
+    border: 1px solid #F04923;
+  }
+
+  &:before {
+    @extend %buttonContentStyle;
+    opacity: 1 !important;
+    color: black !important;
+    background: transparent !important;
+    content: attr(data-front) !important;
+    border: 1px solid #ccc;
+  }
+
+  &__active {
+  @extend %buttonStyleKategori;
+  border: 1px solid #f04923 !important;
+  
+
+  }
+}

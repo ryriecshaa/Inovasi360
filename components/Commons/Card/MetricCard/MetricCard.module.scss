@@ -1,0 +1,55 @@
+.metric {
+  background-color: #fce2dc;
+  font-family: "Plus Jakarta Sans";
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 40px;
+  width: 3500px;
+
+  @media (max-width: 575.5px) {
+    padding: 24px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    padding: 25px;
+  }
+
+  &__statistic {
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+      :global(.ant-image-img) {
+        width: 45px;
+      }
+    }
+  }
+
+  &__title {
+    color: #f04923 !important;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    text-align: left;
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+      font-size: 36px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: left;
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+      font-size: 18px;
+    }
+  }
+
+  &__image {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,46 @@
+@import "styles/custom.scss";
+
+.thumbnailCard {
+  border: none;
+  &__image {
+    :global(.ant-image) {
+      // width: 100%;
+      :global(.ant-image-img) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        border-radius: 16px;
+
+        @media (max-width: 767.5px) {
+          //mobile
+          height: 80%;
+          width: 80%
+        }
+        @media (min-width: 768px) and (max-width: 991.5px) {
+          //tablet
+          height: 80%;
+          width: 80%
+        }
+        @media (min-width: 992px) and (max-width: 1199.5px) {
+          //desktop
+          height: 80%;
+          width: 80%
+        }
+        @media (min-width: 1200px) {
+          //large desktop
+          height: 80%;
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  &__title {
+    @extend %titleContentFont;
+  }
+
+  &__subtitle {
+    @extend %subtitleContentFont;
+  }
+}

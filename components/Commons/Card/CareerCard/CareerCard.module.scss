@@ -1,0 +1,70 @@
+@import "styles/custom.scss";
+
+$speed: 1s;
+
+.careerCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 40px 40px;
+  gap: 73px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $light-grey;
+  border-radius: 16px;
+
+  //   animation
+  transition: $speed;
+  position: relative;
+  overflow: hidden;
+
+  &__location {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__iconLocation {
+    font-size: 25px;
+  }
+
+  &__title {
+    font-size: 48px !important;
+  }
+}
+
+.careerCard:hover {
+  background-color: $navy;
+  z-index: 0;
+  color: $white !important;
+
+  :global(.ant-typography) {
+    color: $white !important;
+  }
+
+  :global(.ant-btn) {
+    &:before {
+      color: $white !important;
+      border: 1px solid $white;
+    }
+  }
+}
+
+.careerCard::before {
+  content: "";
+  position: absolute;
+  right: -100px;
+  width: 0;
+  height: 0;
+  background: $navy;
+  z-index: 0;
+  transition: $speed;
+
+  margin: auto;
+  border-radius: 50% 0 0 50%;
+}
+
+.careerCard:hover::before {
+  width: 180%;
+  z-index: -1;
+  height: 400%;
+}

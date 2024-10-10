@@ -1,0 +1,53 @@
+@import "styles/custom.scss";
+
+.filter {
+  border: 1px solid $light-grey;
+  border-radius: 28px;
+  padding: 12px 24px;
+  width: fit-content;
+  font-size: 16px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: transform 0.5s; //will be inherited
+  //transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+  display: block;
+
+  &::after {
+    content: attr(data-after);
+    display: inline-block;
+    transform: translateY(-125%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px 24px;
+    transition: inherit;
+  }
+
+  > span {
+    display: inline-block;
+    transform: translateY(0%);
+    transition: inherit;
+  }
+
+  &:hover {
+    padding: 12px 24px;
+    > span {
+      transform: translateY(125%);
+    }
+    &::after {
+      transform: translateY(0%);
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: $black;
+  }
+
+  &__active {
+    border: 1px solid red;
+  }
+}

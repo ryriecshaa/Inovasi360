@@ -1,0 +1,69 @@
+.floatingButton {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #f04923;
+  color: #ffffff;
+  //   box-shadow: 2px 2px 3px #999;
+  border: none;
+  z-index: 100;
+  font-size: 30px;
+  font-weight: 600;
+  padding-top: 0px;
+}
+
+.floatingButton:hover,
+.floatingButton:focus {
+  background-color: #f04923;
+  color: #ffffff;
+}
+
+.drawer {
+  :global(.ant-drawer-content-wrapper) {
+    margin: 70px 40px 30px 40px;
+    width: 500px !important;
+  }
+
+  :global(.ant-drawer-content) {
+    border-radius: 20px;
+  }
+
+  &__headerIconSearch {
+    border: none !important;
+    pointer-events: none;
+  }
+  
+  @media (max-width: 768px) {
+    :global(.ant-drawer-content-wrapper) {
+      margin: 30px 10px;
+      width: 95% !important;
+    }
+  }
+
+  &__headerTitle {
+    font-weight: bold !important;
+    font-size: 16px !important;
+    line-height: 41px !important;
+    color: #000 !important;
+    width: fit-content;
+    border :none !important;
+  }
+
+  &__headerTitle::placeholder {
+    color:black;
+  }
+
+  &__headerIconClose {
+    border: none !important;
+  }
+
+   &__accordionContainer {
+    display: grid;
+    gap: 12px;
+    margin-top: 2rem;
+    color: #000;
+  }
+
+}

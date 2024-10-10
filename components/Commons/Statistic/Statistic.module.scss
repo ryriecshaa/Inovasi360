@@ -1,0 +1,56 @@
+@import "styles/custom.scss";
+
+.statistic {
+  background-color: $light-cream;
+
+  &__content {
+    @extend %padding;
+    text-align: center;
+    font-weight: 500;
+    display: grid;
+    gap: 60px;
+
+    @media (max-width: 575.5px) {
+      :global(.ant-col) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__header {
+    display: grid;
+    gap: 24px;
+
+    &__left {
+      text-align: left;
+    }
+
+    &__center {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    @extend %titleFont;
+  }
+
+  &__subtitle {
+    @extend %subtitleFont;
+    display: grid;
+    gap: 8px;
+    font-weight: 300;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin: auto;
+  }
+
+  &__buttonAboutUs{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+}

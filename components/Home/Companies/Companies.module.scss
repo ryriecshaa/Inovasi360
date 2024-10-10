@@ -1,0 +1,11 @@
+@import "styles/custom.scss";
+
+.companies {
+  @extend %padding;
+  display: grid;
+  gap: 100px;
+
+  &__title {
+    text-align: center;
+  }
+}
