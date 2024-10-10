@@ -1,0 +1,177 @@
+// Color Pallette
+$orange: #ffab05;
+$light-orange: #f37f65;
+$navy: #17254e;
+$cream: #fce2dc;
+$light-cream: #fef0ed;
+$white: #ffffff;
+$black: #0a0a0a;
+$light-grey: #e0e0e0;
+$soft-grey: #f5f5f5;
+
+// Padding
+$large-desktop-padding: 80px 120px; //above 1200px
+$desktop-padding: 60px 40px; // min width 992px
+$tablet-padding: 32px; //min width 768px
+$mobile-padding: 32px; //min width: 48px
+
+// Side Padding
+$large-desktop-side-padding: 0 120px; //above 1200px
+$desktop-side-padding: 0 40px; // min width 992px
+$tablet-side-padding: 0 32px; //min width 768px
+$mobile-side-padding: 0 32px; //min width: 48px
+
+// Title Font Size
+$large-desktop-title: 60px !important; //above 1200px
+$desktop-title: 48px !important; // min width 992px
+$tablet-title: 36px !important; //min width 768px
+$mobile-title: 34px !important; //min width: 48px
+
+// Subtitle Font Size
+$large-desktop-subtitle: 30px !important; //above 1200px
+$desktop-subtitle: 24px !important; // min width 992px
+$tablet-subtitle: 18px !important; //min width 768px
+$mobile-subtitle: 16px !important; //min width: 48px
+
+// Title Content Font Size
+$large-desktop-title-content: 38px !important; //above 1200px
+$desktop-title-content: 28px !important; // min width 992px
+$tablet-title-content: 36px !important; //min width 768px
+$mobile-title-content: 34px !important; //min width: 48px
+
+// Subtitle Content Font Size
+$large-desktop-subtitle-content: 24px !important; //above 1200px
+$desktop-subtitle-content: 20px !important; // min width 992px
+$tablet-subtitle-content: 18px !important; //min width 768px
+$mobile-subtitle-content: 16px !important; //min width: 48px
+
+%padding {
+  max-width: 1400px;
+  margin: auto;
+
+  @media (max-width: 767.5px) {
+    //mobile
+    padding: $mobile-padding;
+  }
+  @media (min-width: 768px) and (max-width: 991.5px) {
+    //tablet
+    padding: $tablet-padding;
+  }
+  @media (min-width: 992px) and (max-width: 1199.5px) {
+    //desktop
+    padding: $desktop-padding;
+  }
+  @media (min-width: 1200px) {
+    //large desktop
+    padding: $large-desktop-padding;
+  }
+}
+
+%sidePadding {
+  max-width: 1400px;
+  margin: auto;
+
+  @media (max-width: 767.5px) {
+    //mobile
+    padding: $mobile-side-padding;
+  }
+  @media (min-width: 768px) and (max-width: 991.5px) {
+    //tablet
+    padding: $tablet-side-padding;
+  }
+  @media (min-width: 992px) and (max-width: 1199.5px) {
+    //desktop
+    padding: $desktop-side-padding;
+  }
+  @media (min-width: 1200px) {
+    //large desktop
+    padding: $large-desktop-side-padding;
+  }
+}
+
+%titleFont {
+  margin: 0 !important;
+  font-weight: 800 !important;
+
+  @media (max-width: 767.5px) {
+    //mobile
+    font-size: $mobile-title;
+  }
+  @media (min-width: 768px) and (max-width: 991.5px) {
+    //tablet
+    font-size: $tablet-title;
+  }
+  @media (min-width: 992px) and (max-width: 1199.5px) {
+    //desktop
+    font-size: $desktop-title;
+  }
+  @media (min-width: 1200px) {
+    //large desktop
+    font-size: $large-desktop-title;
+  }
+}
+
+%subtitleFont {
+  margin: 0 !important;
+  font-weight: 300 !important;
+
+  @media (max-width: 767.5px) {
+    //mobile
+    font-size: $mobile-subtitle;
+  }
+  @media (min-width: 768px) and (max-width: 991.5px) {
+    //tablet
+    font-size: $tablet-subtitle;
+  }
+  @media (min-width: 992px) and (max-width: 1199.5px) {
+    //desktop
+    font-size: $desktop-subtitle;
+  }
+  @media (min-width: 1200px) {
+    //large desktop
+    font-size: $large-desktop-subtitle;
+  }
+}
+
+%titleContentFont {
+  margin: 0 !important;
+
+  @media (max-width: 767.5px) {
+    //mobile
+    font-size: $mobile-title-content;
+  }
+  @media (min-width: 768px) and (max-width: 991.5px) {
+    //tablet
+    font-size: $tablet-title-content;
+  }
+  @media (min-width: 992px) and (max-width: 1199.5px) {
+    //desktop
+    font-size: $desktop-title-content;
+  }
+  @media (min-width: 1200px) {
+    //large desktop
+    font-size: $large-desktop-title-content;
+  }
+}
+
+%subtitleContentFont {
+  margin: 0 !important;
+  font-weight: 300 !important;
+
+  @media (max-width: 767.5px) {
+    //mobile
+    font-size: $mobile-subtitle-content;
+  }
+  @media (min-width: 768px) and (max-width: 991.5px) {
+    //tablet
+    font-size: $tablet-subtitle-content;
+  }
+  @media (min-width: 992px) and (max-width: 1199.5px) {
+    //desktop
+    font-size: $desktop-subtitle-content;
+  }
+  @media (min-width: 1200px) {
+    //large desktop
+    font-size: $large-desktop-subtitle-content;
+  }
+}
