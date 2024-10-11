@@ -1,0 +1,21 @@
+@import "styles/custom.scss";
+
+.Apply {
+  display: grid;
+  gap: 35px;
+  @extend %padding;
+
+  @media (max-width: 1199.5px) {
+    gap: 20px;
+  }
+
+  &__buttonBack{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+  }
+}

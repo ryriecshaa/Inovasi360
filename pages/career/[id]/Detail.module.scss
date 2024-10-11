@@ -1,0 +1,16 @@
+@import "styles/custom.scss";
+
+.detail {
+  @extend %padding;
+  display: grid;
+  gap: 72px;
+
+  &__hr {
+    border-top: 1px solid #e0e0e0;
+    margin: auto;
+  }
+
+  &__listLabel {
+    display: flex;
+  }
+}

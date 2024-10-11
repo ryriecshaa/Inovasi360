@@ -1,0 +1,151 @@
+@import "styles/custom.scss";
+
+.home {
+  &__event {
+    @extend %padding;
+  }
+}
+
+.background {
+  display: flex;
+  height: 100vh;
+  flex-direction: column-reverse;
+
+  background-image: url("../public/assets/empty_state.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px 40px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    padding: 60px 80px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 80px 90px;
+  }
+}
+
+.descriptionContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+
+  @media (min-width: 768px) {
+    align-items: stretch;
+    margin-top: 100px;
+  }
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 54px;
+}
+
+.title {
+  font: "Plus Jakarta Sans";
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+
+  &__orange {
+    color: #ffab05;
+  }
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 65px;
+    line-height: 75px;
+  }
+}
+
+.subTitle {
+  font: "Plus Jakarta Sans";
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 34px;
+
+  @media (min-width: 992px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.productsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+  }
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 27px;
+
+  border-radius: 20px;
+  background: #202F5A;
+  padding: 20px;
+}
+
+.productImage {
+  height: 40px;
+  margin: 10px 0;
+
+  @media (min-width: 1200px) {
+    align-self: flex-start;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+}
+
+.button {
+  background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+  border-radius: 100%;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.rocketImage {
+  width: 83px;
+  height: 189px;
+  
+  @media (min-width: 768px) {
+    width: 222px;
+    height: 504px;
+  }
+
+  @media (min-width: 992px) {
+    width: 278px;
+    height: 630px;
+  }
+}

@@ -1,0 +1,11 @@
+@import "styles/custom.scss";
+
+.getCollab {
+  display: grid;
+  gap: 150px;
+  @extend %padding;
+
+  @media (max-width: 1199.5px) {
+    gap: 100px;
+  }
+}

@@ -1,0 +1,47 @@
+@import "styles/custom.scss";
+
+.storyDetail {
+  &__withPadding {
+    @extend %padding;
+  }
+
+  &__content {
+    font-size: 24px !important;
+  }
+
+  &__otherStory {
+    text-align: center;
+    margin-bottom: 72px !important;
+  }
+}
+
+.detail {
+  &__detailSection {
+    // padding-left: 120px;
+  }
+
+  &__sectionContent {
+    // padding-top: 40px;
+    @extend %padding;
+
+    &__listLabel {
+      display: flex;
+      margin: 30px 0 0 -15px;
+    }
+  }
+
+  &__hr {
+    border-top: 1px solid #e0e0e0;
+    min-width: 80%;
+    width: 80%;
+    margin: auto;
+  }
+
+  &__thumbnail {
+    @extend %padding;
+
+    &__margin {
+      margin-top: 50px;
+    }
+  }
+}

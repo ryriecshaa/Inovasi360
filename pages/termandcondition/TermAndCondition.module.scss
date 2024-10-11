@@ -1,0 +1,17 @@
+@import "styles/custom.scss";
+
+.termAndCondition {
+  display: grid;
+  gap: 30px;
+  @extend %padding;
+  font-weight: bold;
+
+  @media (max-width: 1199.5px) {
+    gap: 100px;
+  }
+}
+
+.content {
+  font-size:25px;
+  font-weight: normal;
+}

@@ -1,0 +1,101 @@
+@import "styles/custom.scss";
+
+
+
+
+.portfolio {
+
+  @extend %padding;
+
+  display: grid;
+
+  gap: 140px;
+
+
+
+
+  &__content {
+
+    display: grid;
+
+    gap: 36px;
+
+  }
+
+
+
+
+  &__oddCard {
+
+    margin-top: 50px;
+
+  }
+
+
+
+
+  &__mobileCard {
+
+    display: grid;
+
+    margin-top: 20px;
+
+    max-width: 300;
+
+  }
+
+
+
+
+  @media (max-width: 767.5px) {
+
+    &__searching {
+
+      display: grid;
+
+      row-gap: 1fr 1fr;
+
+    }
+
+
+
+
+    &__mobileCard2 {
+
+      margin-top: 2rem;
+
+    }
+
+  }
+
+
+
+
+  @media (max-width: 414px) {
+
+    &__searching {
+
+      display: grid;
+
+      row-gap: 1fr 1fr;
+
+      margin-left: -1rem;
+
+    }
+
+
+
+
+    &__mobileCard2 {
+
+      margin-top: 2rem;
+
+    }
+
+
+
+
+  }
+
+}
+
